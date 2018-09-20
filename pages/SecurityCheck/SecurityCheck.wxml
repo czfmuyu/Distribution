@@ -1,0 +1,55 @@
+<form bindsubmit='submitOrder'>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      用气编号
+    </view>
+    <input class='' type="text" placeholder="请填写用气编号" data-type='name' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      订单编号
+    </view>
+    <input class='' type="text" placeholder="请填写订单编号" data-type='name' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      配送工
+    </view>
+    <input class='' type="text" placeholder="请填写配送工" data-type='name' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      安检结果
+    </view>
+    <radio-group class="radio-group" name='sex' data-type='sex' bindchange='sex' bindinput='changeOrderData'>
+      <label class="radio" wx:for="{{sex}}" wx:key="id">
+        <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="form-item form-textarea area_sty1">
+    <view class='form-title cur'>
+      安检建议
+    </view>
+    <textarea class='area_sty' placeholder='请输入安检建议' data-type='quantity' bindinput='changeOrderData' maxlength="-1"></textarea>
+  </view>
+
+  <view class='form-box'>
+    <view class='form-item form-upload'>
+      <view class='form-title cur'>
+        上传照片
+      </view>
+      <text style='color:#999999'>(最多可上传9张照片)</text>
+      <view class="lattice-image">
+        <view wx:for="{{orderData.images}}" wx:key="index" wx:for-item="item">
+          <image src='{{item}}' mode='aspectFill' data-index='{{index}}' bindtap='previewImg' data-src='{{item}}'></image>
+          <view class='iconfont icon-close' bindtap='removeImg' data-img_url='{{item}}'></view>
+        </view>
+        <view class='lattice-btn' wx:if="{{orderData.images.length < 9}}">
+          <text class='iconfont icon-cameraadd' mode='aspectFill' bindtap="uploadImg"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class='button_style' bindtap='submitOrder'>提交</button>
+</form>

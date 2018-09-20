@@ -1,0 +1,22 @@
+/* pages/customer/customer.wxss */
+Page{
+  background-color: #eeeeee;
+}
+.text_font{
+  font-weight: 700;
+  width: 200rpx;
+}
+.account{
+  margin-top:20rpx;
+}
+.form-item{
+  background-color: white;
+}
+.button_style{
+  width: 710rpx;
+  height: 80rpx;
+  background-color: #0f59bd;
+  border-radius: 50rpx;
+  margin: 50rpx auto;
+  color:white;
+}

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/HomePage/HomePage",
+    "pages/CompletionOfOk/CompletionOfOk",
+    "pages/DistributionMainte/DistributionMainte",
+    "pages/ChargeS/ChargeS",
+    "pages/DeliveryCompOk/DeliveryCompOk",
+    "pages/CancellationOf/CancellationOf",
+    "pages/Distribution/Distribution",
+    "pages/DetailsOfMainten/DetailsOfMainten",
+    "pages/CpaymentSuccess/CpaymentSuccess",
+    "pages/CdepositPayment/CdepositPayment",
+    "pages/Order/Order",
+    "pages/Customer/Customer",
+    "pages/Safety/Safety",
+    "pages/Punch/Punch",
+    "pages/SecurityCheck/SecurityCheck",
+    "pages/logs/logs",
+    "pages/EmptyBottle/EmptyBottle",
+    "pages/Charge/Charge",
+    "pages/NewSingleDetails/NewSingleDetails",
+    "pages/Ceceipt/Ceceipt",
+    "pages/HaveBeenCancelled/HaveBeenCancelled",
+    "pages/DetailsOfMaintenOk/DetailsOfMaintenOk",
+    "pages/SecurityCheckS/SecurityCheckS",
+    "pages/EmptyBottleS/EmptyBottleS",
+    "pages/CancellationOfD/CancellationOfD",
+    "pages/MaintenanceTreatm/MaintenanceTreatm",
+    "pages/DeliveryCompOkMap/DeliveryCompOkMap"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2269d4",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ababab",
+    "selectedColor": "#72bf5e",
+    "list": [
+      {
+        "pagePath": "pages/HomePage/HomePage",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index1.png"
+      },
+      {
+        "pagePath": "pages/Safety/Safety",
+        "text": "安全宣传",
+        "iconPath": "images/safety.png",
+        "selectedIconPath": "images/safety1.png"
+      },
+      {
+        "pagePath": "pages/Customer/Customer",
+        "text": "邀请客服",
+        "iconPath": "images/customer.png",
+        "selectedIconPath": "images/customer1.png"
+      }
+    ]
+  }
+}

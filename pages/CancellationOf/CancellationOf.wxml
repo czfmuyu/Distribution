@@ -1,0 +1,7 @@
+<view class='cancel'>
+  <view class='cancel_text'>*取消原因</view>
+  <textarea class='cancel_area'>
+
+  </textarea>
+  <button class='button_style'>提交</button>
+</view>

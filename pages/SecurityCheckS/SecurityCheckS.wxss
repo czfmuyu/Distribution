@@ -1,0 +1,19 @@
+/* pages/SecurityCheckS/SecurityCheckS.wxss */
+.area_sty{
+  border: 1rpx solid #f1f1f1;
+  padding: 10rpx ;
+  height: 200rpx !important;
+}
+.area_sty1{
+  height: 250rpx !important;
+}
+
+.button_style{
+  width: 90%;
+  height: 80rpx;
+  background-color: #0f59bd;
+  border-radius: 50rpx;
+  margin: 50rpx auto;
+  color:white;
+  margin-bottom: 50rpx;
+}

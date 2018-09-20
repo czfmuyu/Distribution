@@ -1,0 +1,223 @@
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">订气订单</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">维修订单</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">
+
+
+
+  <!-- 订气订单 ==========================-->
+  <swiper-item>
+    <view class="swiper-tab">
+      <view class="swiper-tab-list1 {{currentTab1==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav1">全部订单</view>
+      <view class="swiper-tab-list1 {{currentTab1==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav1">新单</view>
+      <view class="swiper-tab-list1 {{currentTab1==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav1">已接单</view>
+      <view class="swiper-tab-list1 {{currentTab1==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav1">已取消</view>
+    </view>
+    <swiper current="{{currentTab1}}" class="swiper-box" duration="300" bindchange="bindChange1">
+      <!-- 全部订单 =============-->
+      <swiper-item>
+        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}">
+          <view class='whole_head_text'>
+            <text>订单号：{{item.order}}</text>
+            <text wx:if="{{item.if==0}}" style='color:#2269d4;'>新单</text>
+            <text wx:elif="{{item.if==1}}" style='color:#59e728;'>已接单</text>
+            <text wx:else style='color:#ef6c33;'>已取消</text>
+          </view>
+          <view class='whole_body'>
+            <view class='whole_body_imet'>
+              <text>订购人姓名：{{item.name}}</text>
+              <text>预约时间：2018-03-33</text>
+            </view>
+            <view class='whole_body_imet'>
+              <text>联系方式：{{item.telephone}}</text>
+              <text>支付状态：已支付</text>
+            </view>
+            <view>
+              <view>配送地址：{{item.address}}</view>
+            </view>
+          </view>
+          <view class='bott'>
+            <button wx:if="{{item.if==0}}" class='gray btn sm round primary butt_m' >接收订单</button>
+            <button wx:if="{{item.if==1}}" class='gray btn sm round primary butt_m'>去缴费</button>
+          </view>
+        </view>
+      </swiper-item>
+
+
+      <!-- 新单 ----------------->
+      <swiper-item>
+        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}" bindtap="newsing">
+          <view class='whole_head_text'>
+            <text>订单号：{{item.order}}</text>
+            <text style='color:#2269d4;'>新单</text>
+          </view>
+          <view class='whole_body'>
+            <view class='whole_body_imet'>
+              <text>订购人姓名：{{item.name}}</text>
+              <text>预约时间：2018-03-33</text>
+            </view>
+            <view class='whole_body_imet'>
+              <text>联系方式：{{item.telephone}}</text>
+              <text>支付状态：已支付</text>
+            </view>
+            <view>
+              <view>配送地址：{{item.address}}</view>
+            </view>
+          </view>
+          <view class='bott'>
+            <button class='gray btn sm round primary butt_m'>接收订单</button>
+          </view>
+        </view>
+      </swiper-item>
+
+
+      <!-- 已接单 ===================-->
+      <swiper-item>
+        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}" bindtap="newsing">
+          <view class='whole_head_text'>
+            <text>订单号：{{item.order}}</text>
+            <text style='color:#59e728;'>已接单</text>
+          </view>
+          <view class='whole_body'>
+            <view class='whole_body_imet'>
+              <text>订购人姓名：{{item.name}}</text>
+              <text>预约时间：2018-03-33</text>
+            </view>
+            <view class='whole_body_imet'>
+              <text>联系方式：{{item.telephone}}</text>
+              <text>支付状态：已支付</text>
+            </view>
+            <view>
+              <view>配送地址：{{item.address}}</view>
+            </view>
+          </view>
+          <view class='bott'>
+            <button class='gray btn sm round primary butt_m' bindtap="receipt">去缴费</button>
+          </view>
+        </view>
+      </swiper-item>
+
+
+      <!-- 已取消 ===============-->
+      <swiper-item>
+        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}" bindtap="HaveBeenCancelled">
+          <view class='whole_head_text'>
+            <text>订单号：{{item.order}}</text>
+            <text style='color:#ef6c33;'>已取消</text>
+          </view>
+          <view class='whole_body'>
+            <view class='whole_body_imet'>
+              <text>订购人姓名：{{item.name}}</text>
+              <text>预约时间：2018-03-33</text>
+            </view>
+            <view class='whole_body_imet'>
+              <text>联系方式：{{item.telephone}}</text>
+              <text>支付状态：已支付</text>
+            </view>
+            <view>
+              <view>配送地址：{{item.address}}</view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </swiper-item>
+
+
+
+
+  <!-- 维修订单 ==============-->
+  <swiper-item>
+    <view class="swiper-tab">
+      <view class="swiper-tab-list1 {{currentTab2==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav2">全部订单</view>
+      <view class="swiper-tab-list1 {{currentTab2==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav2">新单</view>
+      <view class="swiper-tab-list1 {{currentTab2==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav2">已接单</view>
+    </view>
+    <swiper current="{{currentTab2}}" class="swiper-box" duration="300" bindchange="bindChange2">
+
+
+      <!-- 维修全部订单===================== -->
+      <swiper-item>
+        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}">
+          <view class='whole_head_text'>
+            <text>保修单号：{{item.order}}</text>
+            <text wx:if="{{item.if==0}}" style='color:#2269d4;'>新单</text>
+            <text wx:else style='color:#efc416;'>已接单</text>
+          </view>
+          <view class='whole_body'>
+            <view class='whole_body_imet'>
+              <text>申请人：{{item.name}}</text>
+              <text>预约时间：2018-03-33</text>
+            </view>
+            <view>
+              <view>联系方式：{{item.telephone}}</view>
+              <view>地址：{{item.address}}</view>
+            </view>
+          </view>
+          <view class='bott'>
+            <button wx:if="{{item.if==0}}" class='gray btn sm round primary butt_m' bindtap="newsing">接收订单</button>
+            <button wx:else class='gray btn sm round warning butt_m'>去维修</button>
+          </view>
+        </view>
+      </swiper-item>
+
+
+      <!-- 维修新单================ -->
+      <swiper-item>
+        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}" bindtap="detailsofmainten">
+          <view class='whole_head_text'>
+            <text>订单号：{{item.order}}</text>
+            <text style='color:#2269d4;'>新单</text>
+          </view>
+          <view class='whole_body'>
+            <view class='whole_body_imet'>
+              <text>订购人姓名：{{item.name}}</text>
+              <text>预约时间：2018-03-33</text>
+            </view>
+            <view class='whole_body_imet'>
+              <text>联系方式：{{item.telephone}}</text>
+              <text>支付状态：已支付</text>
+            </view>
+            <view>
+              <view>配送地址：{{item.address}}</view>
+            </view>
+          </view>
+          <view class='bott'>
+            <button class='gray btn sm round primary butt_m' >接收订单</button>
+          </view>
+        </view>
+      </swiper-item>
+
+
+
+      <!-- 维修已接收=================== -->
+      <swiper-item>
+        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}" bindtap="DetailsOfMaintenOk">
+          <view class='whole_head_text'>
+            <text>订单号：{{item.order}}</text>
+            <text style='color:#efc416;'>已接单</text>
+          </view>
+          <view class='whole_body'>
+            <view class='whole_body_imet'>
+              <text>订购人姓名：{{item.name}}</text>
+              <text>预约时间：2018-03-33</text>
+            </view>
+            <view class='whole_body_imet'>
+              <text>联系方式：{{item.telephone}}</text>
+              <text>支付状态：已支付</text>
+            </view>
+            <view>
+              <view>配送地址：{{item.address}}</view>
+            </view>
+          </view>
+          <view class='bott'>
+            <button class='gray btn sm round warning butt_m' >去维修</button>
+          </view>
+        </view>
+      </swiper-item>
+
+    </swiper>
+  </swiper-item>
+</swiper>

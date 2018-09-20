@@ -1,0 +1,55 @@
+<view class='form-item'>
+  <view class='form-title cur'>
+    用气编号
+  </view>
+  <input class='' type="text" value='{{orderInfo.name}}' disabled='disabled'  class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    订单编号
+  </view>
+  <input class='' type="text" value='{{orderInfo.name1}}' disabled='disabled' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    配送工
+  </view>
+  <input class='' type="text" value='{{orderInfo.name2}}' disabled='disabled' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    安检结果
+  </view>
+  <radio-group name="radio-group">
+    <label>
+      <radio value="合格" /> 合格
+    </label>
+    <label>
+      <radio value="不合格"/> 不合格
+    </label>
+  </radio-group>
+</view>
+<view class="form-item form-textarea area_sty1">
+  <view class='form-title cur'>
+    安检建议
+  </view>
+  <textarea class='area_sty' placeholder='请输入安检建议' maxlength="-1"></textarea>
+</view>
+<view class='form-box'>
+  <view class='form-item form-upload'>
+    <view class='form-title cur'>
+      上传照片
+    </view>
+    <text style='color:#999999'>(最多可上传5张照片)</text>
+    <view class="lattice-image">
+      <view>
+        <image src='http://image.weilanwl.com/img/4x3-1.jpg' mode='aspectFill'></image>
+        <view class='iconfont icon-close'></view>
+      </view>
+      <view class='lattice-btn'>
+        <text class='iconfont icon-cameraadd'></text>
+      </view>
+    </view>
+  </view>
+</view>
+<button class='button_style'bindtap='commoditys'>提交</button>

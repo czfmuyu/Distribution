@@ -1,0 +1,72 @@
+
+ <view class="map_box" wx:if="{{cindex!=2}}" >
+  <map id="navi_map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}" polyline="{{polyline}}" show-location="true"></map>
+</view>
+<view class="bus_box" wx:for="{{transits}}" wx:for-item="i" wx:key="key1" wx:if="{{cindex==2}}">
+  <text class="bus_item" wx:for="{{i.transport}}" wx:for-item="j" wx:key="key2">{{j}}</text>
+</view>
+
+<view class='comp'>
+  <text>订单配送完成</text>
+  <image src='../../images/psy.png'></image>
+</view> 
+<view class='table'>
+  <view class='font_sp'>商品订单</view>
+  <view class='table_bord'>
+    <view class='table_flex table_color'>
+      <text style='margin-left:30rpx;'>名称</text>
+      <text>规格</text>
+      <text>价格</text>
+      <text>数量</text>
+    </view>
+    <view class='table_flex table_m' wx:for="{{table}}" wx:key="{{item}}">
+      <text>{{item.name}}</text>
+      <text>{{item.heavy}}kg</text>
+      <text>{{item.price}}</text>
+      <text>{{item.quantity}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='comp_imet'>
+  <view>
+    <text class='comp_color'>预约时间</text>
+    <text class='comp_font'>立即配送</text>
+  </view>
+  <view class='comp_h'>
+    <text class='comp_color'>配送地址</text>
+    <view class='comp_font comp_w'>d你打算看dddddddddd看您可能但V的呢</view>
+  </view>
+  <view>
+    <text class='comp_color'>支付状态</text>
+    <text class='comp_font'>已付款</text>
+  </view>
+</view>
+
+<view class='zhuant'>
+  <text>安检</text>
+  <text>合格</text>
+</view>
+<view class='zhuant'>
+  <text>回收空瓶</text>
+  <text>3瓶 》</text>
+</view>
+
+<view class='footer'>
+  <view>用气编号：3383638636</view>
+  <view>订购人：小马</view>
+  <view>订单号：3383638636</view>
+  <view>下单时间：2018-05-05</view>
+  <view>支付金额：￥33</view>
+</view>
+ <view style='height:100rpx;'>
+ </view>
+<view class='bj'>
+   <button class='butt' bindtap="order">完成配送</button>
+   <button class='butt butt_color' bindtap="order">取消配送</button>
+   <button class='butt butt_color1' bindtap="order">导航</button>
+</view>
+<!-- 用户编码 -->
+<modal hidden="{{hiddenmodalput}}" title="请输入用户编码" confirm-text="提交" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text'placeholder="用户编码" />  
+</modal> 

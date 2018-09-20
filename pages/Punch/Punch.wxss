@@ -1,0 +1,90 @@
+/* pages/Punch/Punch.wxss */
+.time_sty{
+  width: 300rpx;
+  display: flex;
+  justify-content: space-around;
+   align-items: center;
+}
+.time_sty image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.time_head{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.punch_body{
+  background-color: #ebf1fb;
+  width: 100%;
+}
+.punch_time{
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.punch_time image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.punch_img{
+  width: 330rpx;
+  height: 330rpx;
+}
+.punch_body1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100rpx;
+  position: relative
+}
+.punch_text{
+  margin-top: 15rpx;
+}
+.text_left{
+  margin-left:20rpx;
+}
+.time_wz1{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.time_wz{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 45rpx;
+   align-items: center;
+  position:absolute;
+  top: 180rpx;
+}
+/* 下班 */
+.img_font{
+  width: 40rpx;
+  height: 40rpx;
+}
+.gooff{
+  display: flex;
+  padding: 20rpx;
+
+}
+.gooff_wz{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 45rpx;
+   align-items: center;
+  position:absolute;
+   top: 180rpx;
+}
+/* 补卡 */
+.butt_left{
+  display: flex;
+  margin-top:20rpx;
+  color:#4781db;
+  justify-content: space-between;
+}

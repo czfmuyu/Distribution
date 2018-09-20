@@ -1,0 +1,30 @@
+<view class="Palace">
+  <view class="box" bindtap="punch">
+    <image src="../../images/dksb.png" />
+    <view>开工打卡</view>
+  </view>
+  <view class="box" bindtap="order">
+    <image src="../../images/dd.png" />
+    <view>接订单</view>
+  </view>
+</view>
+<view class="Palace">
+  <view class="box" bindtap="securitycheck">
+    <image src="../../images/aj.png" />
+    <view>安检</view>
+  </view>
+  <view class="box" bindtap="distribution">
+    <image src="../../images/ps.png" />
+    <view>配送</view>
+  </view>
+</view>
+<view class="Palace" bindtap="emptybottle">
+  <view class="box">
+    <image src="../../images/hskp.png" />
+    <view>回收空瓶</view>
+  </view>
+  <view class="box" bindtap="charge">
+    <image src="../../images/sf.png" />
+    <view>收费</view>
+  </view>
+</view>

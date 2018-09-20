@@ -1,0 +1,65 @@
+<form bindsubmit="formSubmit">
+  <view class='form-item'>
+    <view class='form-title cur'>
+      选择商品
+    </view>
+    <view class='form-arrow' bindtap='commodity' data-modal="singleModal">
+      选择商品
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>用气编号</view>
+    <input class='' type="number" value='{{charge.name}}' disabled='disabled' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>订单编号</view>
+    <input class='' type="number" value='{{charge.name}}' disabled='disabled' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>配送工</view>
+    <input class='' type="text" value='{{charge.name}}' disabled='disabled' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      收费种类
+    </view>
+    <radio-group class="radio-group"  name='sex' data-type='sex' bindchange='sex'>
+      <label class="radio" wx:for="{{sex}}" wx:key="id">
+        <radio value="{{item.name}}"  checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>订单收费</view>
+    <input class='' type="number" placeholder="请输入订单收费" bindinput="order" class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>押金收费</view>
+    <input class='' type="number" placeholder="请输入订单押金"  bindinput="deposit" class='form-input'></input>
+  </view>
+  <button class='button_style' formType="submit" bindtap='Submit'>提交</button>
+</form>
+
+
+<!-- 商品选择弹框 -->
+<!-- 是蒙版 -->
+<view class="modal-mask" bindtap="goodsHideModal" catchtouchmove="preventTouchMove" wx:if="{{showgoods}}"></view>
+<view class="modal-dialog" wx:if="{{showgoods}}" style=" top:20%;">
+  <view class="modal-title"></view>
+  <view class="btn-Photograph">商品列表</view>
+  <view class="goodsList" wx:for='{{goodslist}}' wx:for-item="item" wx:key="good.name">
+    <view class="goodsList_text">{{item.Name}}</view>
+    <view class="goodsList_text">￥{{item.Price}}/{{item.PrceType}}</view>
+    <view class="Counter">
+      <view class="Counter_left" data-index='{{index}}' catchtap='subtracttap'>-</view>
+      <view class="Counter_middle">
+        <view class='count' data-index='{{index}}' type='number' bindinput="Quantity">{{item.Quantity}}</view>
+      </view>
+      <view class="Counter_right" data-index="{{index}}" catchtap='addtap'>+</view>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="goodsCancel">取消</view>
+    <view class="btn-confirm" bindtap="goodsConfirm">确定</view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+@import "../NewSingleDetails/NewSingleDetails.wxss";
+@import "../DetailsOfMainten/DetailsOfMainten.wxss";
+.repair{
+  margin-bottom: 20rpx;
+}

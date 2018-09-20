@@ -1,0 +1,46 @@
+<view class='make'>
+  
+    <text style='margin-left:20rpx;'>订单状态</text>
+  <text style='color:#1e54eb'>未处理</text>
+</view>
+<view class='address'>
+  <image class='imgs' src='../../images/wzz.png'></image>
+  <view class='address_tele'>
+    <view class='address_tele_text'>
+      <text>张小小</text>
+      <text>173787272782</text>
+    </view>
+    <view>
+      成都市妻奴发V就看见你呢就就的持久1scas接口就放
+    </view>
+  </view>
+</view>
+<view class='repair'>
+  <view>报修项目</view>
+  <view class='butt_flex'>
+    <view class='butt_color'>炉具问题</view>
+    <view class='butt_color'>炉具问题</view>
+    <view class='butt_color'>炉具问题</view>
+  </view>
+  <view>
+    <view style='font-weight: 600;'>详情描述</view>
+    <view style='margin:17rpx 0'>打不然火那么办</view>
+    <view>
+      <image class='ylimg' src='../../images/psy.png'></image>
+      <image class='ylimg' src='../../images/psy.png'></image>
+      <image class='ylimg' src='../../images/psy.png'></image>
+    </view>
+    <view>2018-09-17</view>
+  </view> 
+</view>
+
+<view class='footer'>
+  <view>用气编号：3383638636</view>
+  <view>订购人：小马</view>
+  <view>订单号：3383638636</view>
+  <view>下单时间：2018-05-05</view>
+  <view>支付金额：￥33</view>
+</view>
+<view class='bj'>
+  <button class='butt' bindtap='Distribution'>维修出发</button>
+</view>

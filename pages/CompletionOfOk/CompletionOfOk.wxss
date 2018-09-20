@@ -1,0 +1,33 @@
+@import "../NewSingleDetails/NewSingleDetails.wxss";
+.make{
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.repair{
+  padding: 20rpx;
+background-color: white;
+margin-top: 20rpx;
+border-bottom: 1rpx solid #f1f1f1;
+}
+.butt_color{
+  padding: 15rpx;
+  background-color: #4240e9;
+  display: inline-block;
+  border-radius: 10rpx 10rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-right: 20rpx;
+}
+.butt_flex{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+.ylimg{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}

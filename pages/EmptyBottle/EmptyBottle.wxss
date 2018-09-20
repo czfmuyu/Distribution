@@ -1,0 +1,9 @@
+/* pages/EmptyBottle/EmptyBottle.wxss */
+.button_style{
+  width: 710rpx;
+  height: 80rpx;
+  background-color: #0f59bd;
+  border-radius: 50rpx;
+  margin: 50rpx auto;
+  color:white;
+}

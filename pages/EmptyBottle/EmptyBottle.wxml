@@ -1,0 +1,63 @@
+<form bindsubmit='submitOrder'>
+<view class='form-item'>
+  <view class='form-title cur'>
+    用气编号
+  </view>
+  <input class='' type="text" placeholder="请填写用气编号" data-type='name' bindinput='changeOrderData' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    是否回收
+  </view>
+  <radio-group class="radio-group"  name='sex' data-type='sex' bindchange='sex' bindinput='changeOrderData'>
+      <label class="radio" wx:for="{{sex}}" wx:key="id">
+        <radio value="{{item.name}}"  checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    回收数量
+  </view>
+  <input class='' type="text" placeholder="请输入回收数量" data-type='quantity' bindinput='changeOrderData' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    是否押瓶
+  </view>
+  <radio-group class="radio-group"  name='sex1' data-type='sex1' bindchange='sex1' bindinput='changeOrderData'>
+      <label class="radio" wx:for="{{sex1}}" wx:key="id">
+        <radio value="{{item.name}}"  checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    押瓶数量
+  </view>
+  <input class='' type="text" placeholder="请输入押瓶数量" data-type='custody' bindinput='changeOrderData' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    押瓶金额
+  </view>
+  <input class='' type="text" placeholder="请输入押瓶金额" data-type='money' bindinput='changeOrderData'  class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    是否欠收
+  </view>
+  <radio-group class="radio-group"  name='sex2' data-type='sex2' bindchange='sex2' bindinput='changeOrderData'>
+      <label class="radio" wx:for="{{sex2}}" wx:key="id">
+        <radio value="{{item.name}}"  checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    欠瓶数量
+  </view>
+  <input class='' type="text" placeholder="请输入欠瓶数量" data-type='owe' bindinput='changeOrderData' class='form-input'></input>
+</view>
+<button class='button_style' bindtap='submitOrder'>提交</button>
+</form>

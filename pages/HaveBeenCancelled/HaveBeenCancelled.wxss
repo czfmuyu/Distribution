@@ -1,0 +1,2 @@
+/* pages/HaveBeenCancelled/HaveBeenCancelled.wxss */
+@import "../NewSingleDetails/NewSingleDetails.wxss"

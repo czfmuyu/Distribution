@@ -1,0 +1,62 @@
+<view class='head_bj'>
+  <view>
+    <view>新订单待接收</view>
+    <view>请排送工接收此新单</view>
+  </view>
+  <image src='../../images/xdd.png'></image>
+</view>
+<view class='address'>
+  <image class='imgs' src='../../images/wzz.png'></image>
+  <view class='address_tele'>
+    <view class='address_tele_text'>
+      <text>张小小</text>
+      <text>173787272782</text>
+    </view>
+    <view>
+      成都市妻奴发V就看见你呢就就的持久1scas接口就放
+    </view>
+  </view>
+</view>
+<view class='make'>
+  <view class='make_jz'>
+    <image class='imgs' src='../../images/sjj.png'></image>
+    <text style='margin-left:20rpx;'>预约时间</text>
+  </view>
+  <text>立即出发</text>
+</view>
+
+<view class='table'>
+  <view class='font_sp'>商品订单</view>
+  <view class='table_bord'>
+    <view class='table_flex table_color'>
+      <text style='margin-left:30rpx;'>名称</text>
+      <text>规格</text>
+      <text>价格</text>
+      <text>数量</text>
+    </view>
+    <view class='table_flex table_m' wx:for="{{table}}" wx:key="{{item}}">
+      <text>{{item.name}}</text>
+      <text>{{item.heavy}}kg</text>
+      <text>{{item.price}}</text>
+      <text>{{item.quantity}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='zhuant'>
+  <text>支付状态</text>
+  <text>已付款</text>
+</view>
+
+<view class='footer'>
+  <view>用气编号：3383638636</view>
+  <view>订购人：小马</view>
+  <view>订单号：3383638636</view>
+  <view>下单时间：2018-05-05</view>
+  <view>支付金额：￥33</view>
+</view>
+<view class='footwz'>
+</view>
+<view class='bj'>
+   <button class='butt' bindtap="order">接收订单</button>
+</view> 

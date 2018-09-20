@@ -1,0 +1,57 @@
+<view class='form-item'>
+  <view class='form-title cur'>
+    选择商品
+  </view>
+</view>
+
+<view class='table'>
+  <view class='font_sp'>商品订单</view>
+  <view class='table_bord'>
+    <view class='table_flex table_color'>
+      <text >名称</text>
+      <text>价格</text>
+      <text>数量</text>
+    </view>
+    <view class='table_flex table_m' wx:for="{{table}}" wx:key="{{item}}">
+      <text>{{item.name}}</text>
+      <text>{{item.price}}</text>
+      <text>{{item.quantity}}</text>
+    </view>
+  </view>
+</view>
+
+
+<view class='form-item'>
+  <view class='form-title cur'>用气编号</view>
+  <input class='' type="number" value='{{charge.name}}' disabled='disabled' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>订单编号</view>
+  <input class='' type="number" value='{{charge.name1}}' disabled='disabled' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>配送工</view>
+  <input class='' type="number" value='{{charge.name2}}' disabled='disabled' class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>
+    收费种类
+  </view>
+  <radio-group name="radio-group">
+    <label>
+      <radio value="瓶数" />瓶数
+    </label>
+    <label>
+      <radio value="公斤" /> 公斤
+    </label>
+  </radio-group>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>订单收费</view>
+  <input class='' type="number" placeholder="请输入订单收费" class='form-input'></input>
+</view>
+<view class='form-item'>
+  <view class='form-title cur'>押金收费</view>
+  <input class='' type="number" placeholder="请输入订单押金" class='form-input'></input>
+</view>
+<button class='button_style'>提交</button>

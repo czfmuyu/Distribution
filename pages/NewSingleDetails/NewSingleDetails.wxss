@@ -1,0 +1,113 @@
+/* pages/NewSingleDetails/NewSingleDetails.wxss */
+Page{
+  background-color: #f1f1f1;
+}
+.head_bj{
+  width: 100%;
+  background-color:#0f59bd;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  color:white;
+}
+.head_bj image{
+  width: 148rpx;
+  height: 148rpx;
+  margin-left: 30%;
+}
+.address{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx;
+  background-color: white;
+}
+.imgs{
+  width: 35rpx;
+  height: 40rpx;
+}
+.address_tele{
+  width: 90%;
+  margin-left: 20rpx;
+}
+.address_tele_text{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.make{
+  display: flex;
+  justify-content: space-between;
+  padding: 25rpx 20rpx 25rpx 20rpx;
+  width: 100%;
+  flex-direction: row;
+   background-color: white;
+}
+.make_jz{
+  display: flex;
+  align-items: center;
+}
+/* 表格 */
+.font_sp{
+  font-weight: 600;
+}
+.table{
+  padding: 20rpx;
+  background-color: white;
+  margin:10rpx 0 10rpx 0;
+}
+.table_bord{
+  border: 1rpx solid #f1f1f1;
+}
+.table_flex{
+  display: flex;
+  justify-content: space-around;
+  border-top: 1rpx solid #f1f1f1;
+  padding: 20rpx;
+}
+.table_color{
+  background-color: #ddd8d8;
+}
+.table_m{
+  margin-top: 15rpx;
+}
+
+
+.zhuant{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.footer{
+  background-color: white;
+  padding: 20rpx;
+  margin-top: 15rpx;
+}
+.footer view{
+  margin-top: 10rpx;
+}
+.footwz{
+  height: 100rpx;
+}
+.butt{
+  width: 192rpx;
+  height: 60rpx;
+  background-color: #0f59bd;
+  border-radius: 50rpx 50rpx;
+  line-height: 60rpx;
+  color:white;
+  margin: 20rpx;
+  float: right;
+  font-size: 30rpx;
+}
+.bj{
+  width: 100%;
+  height: 95rpx;
+   background-color: white;
+   border-top:1rpx solid #f1f1f1;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+}

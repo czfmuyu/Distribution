@@ -1,0 +1,7 @@
+<view class='pay'>
+  <image style='width:50rpx;height:50rpx;' src='../../images/gggg.png'></image>
+  <view>缴费成功</view>
+  <view>支付方式：线上支付</view>
+  <view>实付金额:<text style='color:#f48;'>￥99</text></view>
+  <button class='button_style' bindtap="confirm">返回首页</button>
+</view>
