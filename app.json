@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/HomePage/HomePage",
+    "pages/DeliveryCompOk/DeliveryCompOk",
+    "pages/DetailsOfMaintenOk/DetailsOfMaintenOk",
+    
     "pages/CompletionOfOk/CompletionOfOk",
     "pages/DistributionMainte/DistributionMainte",
     "pages/ChargeS/ChargeS",
-    "pages/DeliveryCompOk/DeliveryCompOk",
     "pages/CancellationOf/CancellationOf",
     "pages/Distribution/Distribution",
     "pages/DetailsOfMainten/DetailsOfMainten",
@@ -21,7 +23,6 @@
     "pages/NewSingleDetails/NewSingleDetails",
     "pages/Ceceipt/Ceceipt",
     "pages/HaveBeenCancelled/HaveBeenCancelled",
-    "pages/DetailsOfMaintenOk/DetailsOfMaintenOk",
     "pages/SecurityCheckS/SecurityCheckS",
     "pages/EmptyBottleS/EmptyBottleS",
     "pages/CancellationOfD/CancellationOfD",
