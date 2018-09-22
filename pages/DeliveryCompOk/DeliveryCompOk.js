@@ -9,7 +9,6 @@ Page({
    */
   data: {
     //地图参数
-    time:0,
     cindex: "0",
     types: ["getDrivingRoute", "getWalkingRoute", "getTransitRoute", "getRidingRoute"],
     markers: [],
@@ -42,8 +41,19 @@ Page({
     this.setData({
       hiddenmodalput: true
     })
+  },  
+  // 跳转到安检页面
+  security:function(){
+    wx.navigateTo({
+      url: '/pages/SecurityCheckS/SecurityCheckS',
+    })
   },
-
+  // 配送完成填表页面
+  DeliveryCompOkMap:function(){
+    wx.navigateTo({
+      url: '/pages/Delivery/Delivery',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -51,35 +61,8 @@ Page({
     //地图逻辑
     // console.log(e)
     // let { latitude, longitude, latitude2, longitude2, city, name, desc } = e;
-
-    // let latitude = "30.641904";
-    // let longitude = "104.043243";
-    this.time()
-    this.getRoute();
-
-  },
-  time() {
-    let this_ = this
-    let Interval=setInterval(function () {
-      amap.getRegeo()//获取当前定位
-        .then(d => {
-          console.log(d);
-          let { name, desc, latitude, longitude } = d[0];
-          let { city } = d[0].regeocodeData.addressComponent;
-          this_.coordinate(latitude, longitude)
-        })
-        if(this_.data.time===1){
-          clearInterval(Interval)
-        }
-    }, 1000)
-  },
-  Stop(){
-    this.setData({
-      time:1
-    })
-  },
-  //获取坐标
-  coordinate(latitude, longitude) {
+    let latitude = "30.641904";
+    let longitude = "104.043243";
     let latitude2 = "30.642839";
     let longitude2 = "104.044046";
     let city = "成都市";
@@ -105,6 +88,8 @@ Page({
     this.setData({
       latitude, longitude, latitude2, longitude2, markers, city, name, desc
     });
+    this.getRoute();
+
   },
   changeType(e) {
     let { id } = e.target.dataset;
@@ -213,5 +198,5 @@ Page({
     });
   },
 
-
+  
 })

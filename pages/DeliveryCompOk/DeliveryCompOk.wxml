@@ -43,9 +43,9 @@
   </view>
 </view>
 
-<view class='zhuant'>
+<view class='zhuant' bindtap='security'>
   <text>安检</text>
-  <text>合格</text>
+  <text>合格 》</text>
 </view>
 <view class='zhuant'>
   <text>回收空瓶</text>
@@ -62,9 +62,9 @@
  <view style='height:100rpx;'>
  </view>
 <view class='bj'>
-   <button class='butt' bindtap="order">完成配送</button>
-   <button class='butt butt_color' bindtap="Stop">取消配送</button>
-   <button class='butt butt_color1' bindtap="nav">导航</button>
+   <button class='butt' bindtap="DeliveryCompOkMap">完成配送</button>
+   <button class='butt butt_color' bindtap="order">取消配送</button>
+   <button class='butt butt_color1' bindtap="order">导航</button>
 </view>
 <!-- 用户编码 -->
 <modal hidden="{{hiddenmodalput}}" title="请输入用户编码" confirm-text="提交" bindcancel="cancel" bindconfirm="confirm">  

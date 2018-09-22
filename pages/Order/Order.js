@@ -10,7 +10,7 @@ Page({
     // tab切换
     currentTab: 0,
     // 订单
-    currentTab1: 0,
+    currentTab1: 1,
     // 维修
     currentTab2: 0,
     whole: [{ order: "111111111111", name: "小孩", telephone: "15556565555", address: "就集聚度见到你",if:0 },
@@ -102,7 +102,13 @@ Page({
       })
     }
   },
-
+// 点击事件======================
+// 拒收
+  rejection:function(){
+    wx.navigateTo({
+      url: '/pages/Rejction/Rejction'
+    });
+  },
 
 // 页面跳转====================ttttttttttttttttttttttt
 // 新单跳转到详情
@@ -136,6 +142,8 @@ Page({
       url: '/pages/HaveBeenCancelled/HaveBeenCancelled',
     })
   },
+
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -20,3 +20,46 @@ Page{
   margin: 50rpx auto;
   color:white;
 }
+
+
+/* 列表 */
+.swiper-tab {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  line-height: 80rpx;
+  margin-bottom: 15rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 50%;
+}
+/* 订气订单 */
+.swiper-tab-list1 {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 25%;
+}
+
+.on {
+  color: #2269d4;
+  border-bottom: 5rpx solid #2269d4;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+}
+.whole{
+  background-color: white;
+  border-bottom: 1rpx solid #f1f1f1;
+  padding: 20rpx;
+  }
+  .whole view{
+    margin-top: 10rpx;
+    font-size: 30rpx;
+  }

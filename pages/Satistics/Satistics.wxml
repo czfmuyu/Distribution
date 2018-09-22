@@ -1,0 +1,60 @@
+<view class='time_head'>
+  <view class="time_text">
+    <image src="../../images/calendar.png" />
+    <text>选择日期</text>
+  </view>
+  <view class="weui-cell__bd">
+    <picker mode="date" value="{{date}}" start="2017-09-01" end="2030-09-01" bindchange="bindDateChange">
+      <view class="weui-input" style="padding-left:276rpx;">{{date}}</view>
+    </picker>
+  </view>
+</view>
+
+<view class='time_head'>
+  <view class="time_text">
+    <image src="../../images/calendar.png" />
+    <text>截止时间</text>
+  </view>
+  <view class="weui-cell__bd">
+    <picker mode="date" value="{{enddate}}" start="2017-09-01" end="2030-09-01" bindchange="bindData">
+      <view class="weui-input" style="padding-left:276rpx;">{{enddate}}</view>
+    </picker>
+  </view>
+</view>
+<view class='money'>
+  <text>配送成功数</text>
+  <text class='money_color'>6000</text>
+</view>
+<view class='money'>
+  <text>邀请客户数</text>
+  <text class='money_color'>4000</text>
+</view>
+<view class='arrears'>
+  <text>欠瓶数</text>
+</view>
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">客户欠款</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">配送工欠款</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">
+  <swiper-item>
+    <view class='whole' wx:for="{{arrears}}" wx:key="{{item}}">
+      <view class="time_text">
+        <image src="{{item.img}}" />
+        <text>{{item.name}}</text>
+      </view>
+      <text>￥{{item.money}}</text>
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class='whole' wx:for="{{arrears}}" wx:key="{{item}}">
+      <view class="time_text">
+        <image src="{{item.img}}" />
+        <text>{{item.name}}</text>
+      </view>
+      <text>￥{{item.money}}</text>
+    </view>
+  </swiper-item>
+</swiper>

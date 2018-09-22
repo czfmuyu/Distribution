@@ -18,10 +18,10 @@
     <view>配送</view>
   </view>
 </view>
-<view class="Palace" bindtap="emptybottle">
+<view class="Palace" bindtap="Customer">
   <view class="box">
-    <image src="../../images/hskp.png" />
-    <view>回收空瓶</view>
+    <image src="../../images/customer1.png" />
+    <view>邀请客户</view>
   </view>
   <view class="box" bindtap="charge">
     <image src="../../images/sf.png" />

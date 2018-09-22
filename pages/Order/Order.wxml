@@ -6,7 +6,6 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">
 
 
-
   <!-- 订气订单 ==========================-->
   <swiper-item>
     <view class="swiper-tab">
@@ -67,6 +66,7 @@
             </view>
           </view>
           <view class='bott'>
+          <button class='gray btn sm round warning butt_m' bindtap='rejection'>拒收</button>
             <button class='gray btn sm round primary butt_m'>接收订单</button>
           </view>
         </view>

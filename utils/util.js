@@ -29,4 +29,30 @@ module.exports = {
       urls: imgs
     })
   },
+
+
+  /**
+	 * 错误消息提示
+	 */
+  showError(err_msg, url) {
+    wx.showModal({
+      title: "提示",
+      content: err_msg,
+      showCancel: false,
+      confirmColor: "#72bf5e",
+      success: res => {
+        if (url) {
+          if (url.indexOf('user/index') > -1) {
+            wx.switchTab({
+              url: url,
+            })
+          } else {
+            wx.navigateTo({
+              url: url,
+            })
+          }
+        }
+      }
+    })
+  }
 }

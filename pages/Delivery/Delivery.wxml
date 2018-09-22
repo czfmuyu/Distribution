@@ -1,0 +1,54 @@
+<view class='table'>
+  <view class='font_sp'>商品信息</view>
+  <view class='table_bord'>
+    <view class='table_flex table_color'>
+      <text style='margin-left:30rpx;'>名称</text>
+      <text>规格</text>
+      <text>数量</text>
+    </view>
+    <view class='table_flex table_m' wx:for="{{table}}" wx:key="{{item}}">
+      <text>{{item.name}}</text>
+      <text>{{item.price}}</text>
+      <text>{{item.quantity}}</text>
+    </view>
+  </view>
+</view>
+<form bindsubmit='submitOrder'>
+<view class='form-item'>
+    <view class='form-title cur'>
+      合计金额
+    </view>
+    <input class='' type="text" placeholder="请输入金额" data-type='money' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      钢瓶信息
+    </view>
+    <input class='' type="text" placeholder="请填写订单编号" data-type='identifier' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      空瓶数
+    </view>
+    <input class='' type="text" placeholder="请输入空瓶数" data-type='empty' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      押金
+    </view>
+    <input class='' type="text" placeholder="请输入押金" value='{{orderData.deposit}}' data-type='deposit' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      押瓶数
+    </view>
+    <input class='' type="text" placeholder="请输入押瓶数" value='{{orderData.depositnum}}' data-type='depositnum' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+  <view class='form-item'>
+    <view class='form-title cur'>
+      欠瓶数
+    </view>
+    <input class='' type="text" placeholder="请输入欠瓶数" value='{{orderData.underbottle}}' data-type='underbottle' bindinput='changeOrderData' class='form-input'></input>
+  </view>
+   <button class='button_style' bindtap='submitOrder'>提交</button>
+   </form>

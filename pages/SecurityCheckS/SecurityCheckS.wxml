@@ -16,40 +16,38 @@
   </view>
   <input class='' type="text" value='{{orderInfo.name2}}' disabled='disabled' class='form-input'></input>
 </view>
-<view class='form-item'>
-  <view class='form-title cur'>
-    安检结果
+ <view class='form-item'>
+    <view class='form-title cur'>
+      安检结果
+    </view>
+    <radio-group class="radio-group" name='sex' data-type='sex' bindchange='sex' bindinput='changeOrderData'>
+      <label class="radio" wx:for="{{sex}}" wx:key="id">
+        <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
   </view>
-  <radio-group name="radio-group">
-    <label>
-      <radio value="合格" /> 合格
-    </label>
-    <label>
-      <radio value="不合格"/> 不合格
-    </label>
-  </radio-group>
-</view>
 <view class="form-item form-textarea area_sty1">
   <view class='form-title cur'>
     安检建议
   </view>
-  <textarea class='area_sty' placeholder='请输入安检建议' maxlength="-1"></textarea>
+  <textarea class='area_sty' placeholder='请输入安检建议' maxlength="-1" data-type='securit' bindinput="securit"></textarea>
 </view>
 <view class='form-box'>
-  <view class='form-item form-upload'>
-    <view class='form-title cur'>
-      上传照片
-    </view>
-    <text style='color:#999999'>(最多可上传5张照片)</text>
-    <view class="lattice-image">
-      <view>
-        <image src='http://image.weilanwl.com/img/4x3-1.jpg' mode='aspectFill'></image>
-        <view class='iconfont icon-close'></view>
+    <view class='form-item form-upload'>
+      <view class='form-title cur'>
+        上传照片
       </view>
-      <view class='lattice-btn'>
-        <text class='iconfont icon-cameraadd'></text>
+      <text style='color:#999999'>(最多可上传9张照片)</text>
+      <view class="lattice-image">
+        <view wx:for="{{orderInfo.images}}" wx:key="index" wx:for-item="item">
+          <image src='{{item}}' mode='aspectFill' data-index='{{index}}' bindtap='previewImg' data-src='{{item}}'></image>
+          <view class='iconfont icon-close' bindtap='removeImg' data-img_url='{{item}}'></view>
+        </view>
+        <view class='lattice-btn' wx:if="{{orderInfo.images.length < 9}}">
+          <text class='iconfont icon-cameraadd' mode='aspectFill' bindtap="uploadImg"></text>
+        </view>
       </view>
     </view>
   </view>
-</view>
 <button class='button_style'bindtap='commoditys'>提交</button>
+<button class='button_style butt'bindtap='commoditys'>取消</button>
