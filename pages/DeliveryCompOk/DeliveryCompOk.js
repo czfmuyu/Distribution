@@ -10,7 +10,7 @@ Page({
   data: {
     //地图参数
     cindex: "0",
-    time:0,
+    time: 0,
     types: ["getDrivingRoute", "getWalkingRoute", "getTransitRoute", "getRidingRoute"],
     markers: [],
     polyline: [],
@@ -65,6 +65,13 @@ Page({
 
     // let latitude = "30.641904";
     // let longitude = "104.043243";
+    amap.getRegeo()//获取当前定位
+      .then(d => {
+        console.log(d);
+        let { name, desc, latitude, longitude } = d[0];
+        let { city } = d[0].regeocodeData.addressComponent;
+        this.coordinate(latitude, longitude)
+      })
     this.time()
     this.getRoute();
 
@@ -82,7 +89,7 @@ Page({
       if (this_.data.time === 1) {
         clearInterval(Interval)
       }
-    }, 5000)
+    }, 50000)
   },
   Stop() {
     this.setData({
