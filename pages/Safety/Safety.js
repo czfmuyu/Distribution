@@ -1,5 +1,8 @@
 var util = require('../../utils/util.js');
-
+let app = getApp().globalData
+let { baseUrl } = getApp().globalData
+// 上传图片接口
+const Urlsimg = `${baseUrl}/Api/Files/UploadImg`
 
 Page({
 
@@ -14,11 +17,16 @@ Page({
       custody: '',//押瓶数
       money: "",//押瓶金额
       sex: "0",
-      sex1: "0",
+      sex1: "0", 
       sex2: "0",
       owe: '',//欠瓶数
       images:[]
     },
+    // 存放用户选择的图片路径数组
+    pics:"",
+    // 上传图片编号
+    identifier: [],
+
   },
 
 
@@ -42,77 +50,71 @@ Page({
   /**
  * 上传图片
  */
-  uploadImg: function () {
-    let _this = this;
-    let imgs = _this.data.orderData.images;
-    if (imgs.length >= 9) {
-      util.showError('最多上传9张图片');
-      return false;
-    }
-    _this.chooseimage()
-  },
-  //选择相机还是本地图片
-  chooseimage: function () {
-    var that = this;
-    wx.showActionSheet({
-      itemList: ['从相册中选择', '拍照'],
-      itemColor: "#2168d3",
-      success: function (res) {
-        if (!res.cancel) {
-          if (res.tapIndex == 0) {
-            that.chooseWxImage('album')
-          } else if (res.tapIndex == 1) {
-            that.chooseWxImage('camera')
-          }
+  pictureuploading(){
+    var _this=this
+    pics=this.data.pics;
+    
+    wx.chooseImage({
+      count: 9,//最多上传多少张图片
+      sizeType: ['compressed'],//是否压缩
+      sourceType:['album','camera'],//从相册还是拍照
+      success: function(res) {
+        var imgurl=res.tempFilePaths;
+        pics = pics.concat(imgsrc);
+        if (pics.length >= 9) {
+          wx.showToast({
+            title: "最多上传9张图片！",
+            image: "../../imgs/xcit.png",
+            duration: 2000
+          });
+          return false
         }
-      }
+        that.setData({
+          pics: pics
+        });
+      },
     })
   },
+  uploadimg:function(){
+    let _this=this
+    let pics=_this.data.pics;
+    let imglist = _this.data.identifier
+    for (let i = 0; pics.length>i;i++){
+      wx.uploadFile({
+        url: Urlsimg,
+        filePath:pics[i],
+        name: 'image',
+        success:(res)=>{
+          var identifier
+          let data=res.data
+          let imglists=JSON.parse(data);
+          let datalist = imglists.Data
+          imglist = imglist.concat(datalist)
+          identifier = imglist.join(',');
+          that.setData({
+            "frolist.PhotoIds": identifier,
+          })
 
-  chooseWxImage: function (type) {
-    var _this = this;
-    wx.chooseImage({
-      count: 9, // 默认9
-      sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
-      sourceType: [type], // 可以指定来源是相册还是相机，默认二者都有
-      success: function (res) {
-        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        var tempFilePaths = res.tempFilePaths;
-        var imgs = _this.data.orderData.images;
-        for (var i = 0; i < tempFilePaths.length; i++) {
-          if (imgs.length >= 9) {
-            _this.setData({
-              "orderData.images": imgs
-            });
-            return false;
-          } else {
-            imgs.push(tempFilePaths[i]);
-          }
         }
-        //  console.log(imgs);
-        _this.setData({
-          "orderData.images": imgs
-        });
-      }
-    });
+      })
+    }
   },
-
 
   /**
    * 移除图片
    */
   removeImg(e) {
     let img = e.target.dataset.img_url;
-    let imgs = this.data.orderData.images;
-    imgs.splice(imgs.indexOf(img), 1);
+    let imgs = this.data.pics;
+    imgs.splice(imgs.indexOf(img), 1);//找出第一个,反回下标然后删除
     this.setData({
-      'orderData.images': imgs
+      pics: imgs
     })
   },
   // 图片预览
   previewImg: function (e) {
     var data_evnt = e;   //将函数事件对象传入 ，以及图片获取到的数组 
-    util.imgpreview(data_evnt, this.data.orderData.images)
+    util.imgpreview(data_evnt, this.data.pics)
   },
   /**
    * 生命周期函数--监听页面加载

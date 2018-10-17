@@ -1,175 +1,202 @@
-
-page{
+page {
   background-color: #f1f1f1;
 }
-.comp{
+
+.comp {
   display: flex;
   align-items: center;
   padding: 20rpx 50rpx 20rpx 50rpx;
   justify-content: space-between;
   background-color: white;
 }
-.comp text{
+
+.comp text {
   font-size: 40rpx;
-  color:rgba(35, 109, 219, 0.932);
+  color: rgba(35, 109, 219, 0.932);
   font-weight: 700;
 }
-.comp image{
+
+.comp image {
   width: 178rpx;
   height: 144rpx;
 }
+
 /* 表格 */
-.font_sp{
+
+.font_sp {
   font-weight: 600;
 }
-.table{
+
+.table {
   padding: 20rpx;
   background-color: white;
-  margin:10rpx 0 10rpx 0;
+  margin: 10rpx 0 10rpx 0;
 }
-.table_bord{
+
+.table_bord {
   border: 1rpx solid #f1f1f1;
 }
-.table_flex{
+
+.table_flex {
   display: flex;
   justify-content: space-around;
   border-top: 1rpx solid #f1f1f1;
   padding: 20rpx;
 }
-.table_color{
+
+.table_color {
   background-color: #ddd8d8;
 }
-.table_m{
+
+.table_m {
   margin-top: 15rpx;
 }
 
-.comp_imet{
+.comp_imet {
   background-color: white;
   padding: 20rpx;
   margin-bottom: 20rpx;
 }
-.comp_color{
+
+.comp_color {
   font-size: 35rpx;
-  color: #dddddd;
+  color: #ddd;
   margin-right: 20rpx;
-  
 }
-.comp_font{
+
+.comp_font {
   font-size: 30rpx;
 }
-.comp_h{
+
+.comp_h {
   display: flex;
   margin: 40rpx 0 40rpx 0;
 }
-.comp_w{
+
+.comp_w {
   width: 300rpx;
   word-wrap: break-word;
   word-break: break-all;
 }
-.zhuant{
+
+.zhuant {
   padding: 30rpx 20rpx;
   display: flex;
   justify-content: space-between;
   background-color: white;
   border-bottom: 1rpx solid #f1f1f1;
 }
-.footer{
+
+.footer {
   background-color: white;
   padding: 20rpx;
   margin-top: 15rpx;
 }
-.footer view{
+
+.footer view {
   margin-top: 10rpx;
 }
 
-
 /* 地图 */
-.flex-style{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-  }
-  .flex-item{
-    height: 35px; 
-    line-height: 35px;
-    text-align: center;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1
-  }
-  .flex-item.active{
-    color:#0091ff;
-  }
-  #navi_map{
-    width: 100%;
-    height: 1026rpx;
-  }
-  .text_box{
-    position:absolute;
-    height: 90px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-  }
-  .text_box .text{
-    margin: 15px;
-  }
-  .detail_button{
-    position:absolute;
-    bottom: 50px;
-    right: 10px;
-    padding: 3px 5px;
-    color: #fff;
-    background: #0091ff;
-    width:50px;
-    text-align:center;
-    border-radius:5px;
-  }
-  .detail_button2{
-    position:absolute;
-    bottom: 10px;
-    right: 10px;
-    padding: 3px 5px;
-    color: #fff;
-    background: #0091ff;
-    width:50px;
-    text-align:center;
-    border-radius:5px;
-  }
-  
-  .bus_box{
-    margin: 0 15px;
-    padding: 15px 0;
-    border-bottom: 1px solid #c3c3c3;
-    font-size: 13px;
-  }
-  .bus_box .bus_item{
-    display:inline-block;line-height: 8px;
-  }
 
-  .butt{
+.flex-style {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-item {
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.flex-item.active {
+  color: #0091ff;
+}
+
+#navi_map {
+  width: 100%;
+  height: 1026rpx;
+}
+
+.text_box {
+  position: absolute;
+  height: 90px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.text_box .text {
+  margin: 15px;
+}
+
+.detail_button {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  padding: 3px 5px;
+  color: #fff;
+  background: #0091ff;
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.detail_button2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 3px 5px;
+  color: #fff;
+  background: #0091ff;
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.bus_box {
+  margin: 0 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #c3c3c3;
+  font-size: 13px;
+}
+
+.bus_box .bus_item {
+  display: inline-block;
+  line-height: 8px;
+}
+
+.butt {
   width: 192rpx;
   height: 60rpx;
   background-color: #0f59bd;
   border-radius: 50rpx 50rpx;
   line-height: 60rpx;
-  color:white;
+  color: white;
   margin: 20rpx;
   float: right;
   font-size: 30rpx;
 }
-.bj{
+
+.bj {
   width: 100%;
   height: 95rpx;
-   background-color: white;
-   border-top:1rpx solid #f1f1f1;
-   position: fixed;
-   bottom: 0;
-   left: 0;
+  background-color: white;
+  border-top: 1rpx solid #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
-.butt_color{
+
+.butt_color {
   background-color: #fa9511;
 }
-.butt_color1{
+
+.butt_color1 {
   background-color: #d6d6dd;
 }

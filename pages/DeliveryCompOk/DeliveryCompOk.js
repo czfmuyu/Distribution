@@ -217,6 +217,7 @@ Page({
 
     }
   },
+  
   goDetail() {
     let url = `/pages/info/info`;
     wx.navigateTo({ url });

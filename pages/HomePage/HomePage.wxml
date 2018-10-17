@@ -3,12 +3,12 @@
     <image src="../../images/dksb.png" />
     <view>开工打卡</view>
   </view>
-  <view class="box" bindtap="order">
+  <view class="box" bindtap="Distribution">
     <image src="../../images/dd.png" />
     <view>接订单</view>
   </view>
 </view>
-<view class="Palace">
+<!-- <view class="Palace">
   <view class="box" bindtap="securitycheck">
     <image src="../../images/aj.png" />
     <view>安检</view>
@@ -17,14 +17,14 @@
     <image src="../../images/ps.png" />
     <view>配送</view>
   </view>
-</view>
+</view> -->
 <view class="Palace" bindtap="Customer">
   <view class="box">
     <image src="../../images/customer1.png" />
     <view>邀请客户</view>
   </view>
-  <view class="box" bindtap="charge">
+  <view class="box" bindtap="Safety">
     <image src="../../images/sf.png" />
-    <view>收费</view>
+    <view>安全宣传</view>
   </view>
 </view>

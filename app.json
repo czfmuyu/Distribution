@@ -48,7 +48,7 @@
         "selectedIconPath": "images/index1.png"
       },
       {
-        "pagePath": "pages/Order/Order",
+        "pagePath": "pages/Distribution/Distribution",
         "text": "订单",
         "iconPath": "images/safety.png",
         "selectedIconPath": "images/safety1.png"

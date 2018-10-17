@@ -1,6 +1,6 @@
 let amapFile = require("./amap-wx");
 // 高德开发者key
-let key = 'e07ec456962d7a8e1420ad3de2101842';
+let key = '7ac58ce266c8bdc98d842c2d89cc7f22';
 let myAmapFun = new amapFile.AMapWX({ key });
 
 class Amap {

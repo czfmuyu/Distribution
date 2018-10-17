@@ -1,8 +1,7 @@
 <view class='time_head'>
   <view class='time_sty'>
     <image src='../../images/calendar.png'></image>
-    <text>2018.08.09</text>
-    <text>星期五</text>
+    <text>{{year}}</text>
   </view>
   <text>一天24小时，这是你创造财富的时间</text>
 </view>
@@ -11,7 +10,7 @@
   <view class='punch_body'>
     <view class='punch_time'>
       <image src='../../images/xb.png'></image>
-      <text class='text_left'>上班时间{{time}}</text>
+      <text class='text_left'>上班时间{{timegotos}}</text>
     </view>
     <view class='punch_body1'>
       <view class='time_wz1' bindtap="goto">
@@ -23,14 +22,14 @@
       </view>
       <view class='punch_time punch_text'>
         <image src='../../images/xb2.png'></image>
-        <text class='text_left'>你以进入打卡考勤范围：明德广场10F</text>
+        <text class='text_left'>你以进入打卡考勤范围：{{name}}</text>
       </view>
     </view>
   </view>
   <view>
     <view class='punch_time'>
       <image src='../../images/xb2.png'></image>
-      <text class='text_left'>下班时间{{time}}</text>
+      <text class='text_left'>下班时间{{timegooff}}</text>
     </view>
   </view>
 </view>
@@ -39,9 +38,9 @@
   <view class='gooff'>
     <image class='img_font' src='../../images/xb.png'></image>
     <view style='margin-left:20rpx;'>
-      <text>上班时间08:30</text>
+      <text>上班时间{{timegotos}}</text>
       <view style='margin-top:20rpx;color:#4781db;'>
-        <text style='margin-right:40rpx;'>打卡时间08:20</text>
+        <text style='margin-right:40rpx;'>打卡时间{{timegoto}}</text>
         <button class='gray btn hollow xs primary'>正常</button>
       </view>
     </view>
@@ -49,26 +48,20 @@
   <view class='punch_body'>
     <view class='punch_time'>
       <image src='../../images/xb.png'></image>
-      <text class='text_left'>下班时间{{time}}</text>
+      <text class='text_left'>下班时间{{timegooff}}</text>
     </view>
     <view class='punch_body1'>
       <view class='time_wz1' bindtap="gooff">
         <image class='punch_img' src='../../images/dk.png'></image>
         <view class='gooff_wz'>
-          <text>8:30:00</text>
+          <text>{{time}}</text>
           <text>下班打卡</text>
         </view>
       </view>
       <view class='punch_time punch_text'>
         <image src='../../images/xb2.png'></image>
-        <text class='text_left'>你以进入打卡考勤范围：明德广场10F</text>
+        <text class='text_left'>你以进入打卡考勤范围：{{name}}</text>
       </view>
-    </view>
-  </view>
-  <view>
-    <view class='punch_time'>
-      <image src='../../images/xb2.png'></image>
-      <text class='text_left'>下班时间{{time}}</text>
     </view>
   </view>
 </view>
@@ -78,9 +71,9 @@
     <view class='gooff'>
       <image class='img_font' src='../../images/xb.png'></image>
       <view style='margin-left:20rpx;'>
-        <text>上班时间{{time}}</text>
+        <text>上班时间8:00</text>
         <view style='margin-top:20rpx;color:#4781db;'>
-          <text style='margin-right:40rpx;'>打卡时间{{time}}</text>
+          <text style='margin-right:40rpx;'>打卡时间{{timegoto}}</text>
           <button class='gray btn hollow xs primary'>正常</button>
         </view>
       </view>
@@ -88,10 +81,10 @@
     <view class='gooff'>
       <image class='img_font' src='../../images/xb.png'></image>
       <view style='margin-left:20rpx;'>
-        <text>下班时间{{time}}</text>
+        <text>下班时间{{timegooff}}</text>
         <view style='margin-top:20rpx;color:#4781db;'>
-          <text style='margin-right:40rpx;'>打卡时间{{time}}</text>
-          <button class='gray btn hollow xs primary'>正常</button>
+          <text style='margin-right:40rpx;'>打卡时间{{timegooff}}</text>
+          <button class='gray btn hollow xs primary' bindtap='gooffkey' >正常</button>
         </view>
       </view>
     </view>
@@ -123,7 +116,7 @@
       </view>
       <view class='punch_time punch_text'>
         <image src='../../images/xb2.png'></image>
-        <text class='text_left'>你以进入打卡考勤范围：明德广场10F</text>
+        <text class='text_left'>你以进入打卡考勤范围：{{name}}</text>
       </view>
     </view>
   </view>
@@ -145,7 +138,7 @@
       </view>
       <view class='punch_time punch_text'>
         <image src='../../images/xb2.png'></image>
-        <text class='text_left'>你以进入打卡考勤范围：明德广场10F</text>
+        <text class='text_left'>你以进入打卡考勤范围：{{name}}</text>
       </view>
     </view>
   </view>

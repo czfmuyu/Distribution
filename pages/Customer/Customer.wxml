@@ -1,80 +1,69 @@
-
-<button bindtap='addend'>添加用户</button>
-<form bindsubmit='submitOrder' hidden='{{!Customer}}'>
-  <view class='form-item'>
-    <view class='form-title text_font'>
-      用气编号
-    </view>
-  </view>
-  <view class='form-item'>
-    <view class='form-title cur'>
-      用气编号
-    </view>
-    <input class='' type="text" placeholder="请填写用气编号" data-type='name' bindinput='changeOrderData' class='form-input'></input>
-  </view>
-  <view class='form-item'>
-    <view class='form-title cur'>
-      联系电话
-    </view>
-    <input class='' type="text" placeholder="请填写联系电话" data-type='quantity' bindinput='changeOrderData' class='form-input'></input>
-  </view>
-  <view class='form-item'>
-    <view class='form-title cur'>
-      名称
-    </view>
-    <input class='' type="text" placeholder="请填写名称" data-type='custody' bindinput='changeOrderData' class='form-input'></input>
-  </view>
-  <view class='form-item'>
-    <view class='form-title cur'>
-      地址
-    </view>
-    <input class='' type="text" placeholder="请填写地址" data-type='money' bindinput='changeOrderData' class='form-input'></input>
-  </view>
-
-  <view class='account'>
-    <view class='form-item'>
-      <view class='form-title text_font'>
-        主账号信息
-      </view>
-    </view>
-    <view class='form-item'>
-      <view class='form-title cur'>
-        姓名
-      </view>
-      <input class='' type="text" placeholder="请填写主账号姓名" data-type='owe' bindinput='changeOrderData' class='form-input'></input>
-    </view>
-    <view class='form-item'>
-      <view class='form-title cur'>
-        手机号
-      </view>
-      <input class='' type="text" placeholder="请填写主账号手机号" data-type='shouj' bindinput='changeOrderData' class='form-input'></input>
-    </view>
-  </view>
-  <button class='button_style' bindtap='submitOrder'>提交</button>
-</form>
-
-
-
-<!-- 邀请列表 -->
-<view hidden='{{!Customer1}}'>
+<view>
   <view>
     <view class="swiper-tab">
-      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">已激活</view>
-      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">未激活</view>
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">邀请客户</view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">邀请列表</view>
     </view>
 
     <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">
-      <!-- 已激活列表 -->
-      <swiper-item>
-        <view class='whole' wx:for="{{whole}}" wx:key="{{item}}">
-          <view>用气编号：{{item.identifier}}</view>
-          <view>名称：{{item.name}}</view>
-          <view>地址：{{item.address}}</view>
-        </view>
+      <swiper-item >
+        <form bindsubmit='submitOrder'>
+          <view class='form-item'>
+            <view class='form-title text_font'>
+              用气编号
+            </view>
+          </view>
+          <view class='form-item'>
+            <view class='form-title cur'>
+              用气编号
+            </view>
+            <input class='' type="text" placeholder="请填写用气编号" data-type='name' bindinput='changeOrderData' class='form-input'></input>
+          </view>
+          <view class='form-item'>
+            <view class='form-title cur'>
+              联系电话
+            </view>
+            <input class='' type="text" placeholder="请填写联系电话" data-type='quantity' bindinput='changeOrderData' class='form-input'></input>
+          </view>
+          <view class='form-item'>
+            <view class='form-title cur'>
+              名称
+            </view>
+            <input class='' type="text" placeholder="请填写名称" data-type='custody' bindinput='changeOrderData' class='form-input'></input>
+          </view>
+          <view class='form-item'>
+            <view class='form-title cur'>
+              地址
+            </view>
+            <input class='' type="text" placeholder="请填写地址" data-type='money' bindinput='changeOrderData' class='form-input'></input>
+          </view>
+
+          <view class='account'>
+            <view class='form-item'>
+              <view class='form-title text_font'>
+                主账号信息
+              </view>
+            </view>
+            <view class='form-item'>
+              <view class='form-title cur'>
+                姓名
+              </view>
+              <input class='' type="text" placeholder="请填写主账号姓名" data-type='owe' bindinput='changeOrderData' class='form-input'></input>
+            </view>
+            <view class='form-item'>
+              <view class='form-title cur'>
+                手机号
+              </view>
+              <input class='' type="text" placeholder="请填写主账号手机号" data-type='shouj' bindinput='changeOrderData' class='form-input'></input>
+            </view>
+          </view>
+          <button class='button_style' bindtap='submitOrder'>提交</button>
+        </form>
+
       </swiper-item>
 
-      <!-- 未激活列表 -->
-      <swiper-item>
+
+      <swiper-item >
         <view class='whole' wx:for="{{whole}}" wx:key="{{item}}">
           <view>用气编号：{{item.identifier}}</view>
           <view>名称：{{item.name}}</view>

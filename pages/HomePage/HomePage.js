@@ -14,9 +14,9 @@ Page({
     })
   },
   //接订单
-  order() {
+  Distribution() {
     wx.switchTab({
-      url: '/pages/Order/Order',
+      url: 'pages/Distribution/Distribution',
     })
   },
   //安检
@@ -25,12 +25,12 @@ Page({
       url: '/pages/SecurityCheck/SecurityCheck',
     })
   },
-  //配送
-  distribution() {
-    wx.navigateTo({
-      url: '/pages/Distribution/Distribution',
-    })
-  },
+  // //配送
+  // distribution() {
+  //   wx.navigateTo({
+  //     url: '/pages/Distribution/Distribution',
+  //   })
+  // },
   //邀请客服
   Customer() {
     wx.navigateTo({
@@ -38,9 +38,9 @@ Page({
     })
   },
   //收费
-  charge() {
+  Safety() {
     wx.navigateTo({
-      url: '/pages/Charge/Charge',
+      url: '/pages/Safety/Safety',
     })
   },
 

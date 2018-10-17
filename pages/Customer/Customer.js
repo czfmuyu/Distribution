@@ -5,9 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 是否显示激活列表
-    Customer:false,
-    Customer1:true,
+    
     winWidth: 0,
     winHeight: 0,
     // tab切换
@@ -80,13 +78,7 @@ Page({
       })
     }
   },
-  // 添加用户显示表格
-  addend:function(){
-    this.setData({
-      Customer: true,
-      Customer1: false,
-    })
-  },
+ 
   /**
    * 生命周期函数--监听页面加载
    */
@@ -109,7 +101,7 @@ Page({
     query.select('.whole').boundingClientRect(function (rect) {
       var leng = that.data.whole.length
       that.setData({
-        winHeight: rect.height * leng + 100
+        winHeight: rect.height * leng + 500
       })
     }).exec();
   },
